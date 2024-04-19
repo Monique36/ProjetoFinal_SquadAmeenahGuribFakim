@@ -20,4 +20,13 @@ urlpatterns = [
         login_required(views.adocao_excluir),
         name="adocao_excluir",
     ),
+   path(
+       'adocoes/interesse_adocao/<int:animal_id>/', 
+       login_required(views.interesse_adocao), 
+       name='interesse_adocao'
+       ),
+
+
+      
 ]
+

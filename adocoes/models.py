@@ -107,3 +107,9 @@ class Adocao(models.Model):
         verbose_name = "Adoção"
         verbose_name_plural = "Adoções"
         ordering = ["-data_solicitacao"]
+
+class InteresseAdocao(models.Model):
+    interessado = models.ForeignKey(User, on_delete=models.CASCADE)
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE)
+    mensagem = models.TextField()
+    data_interesse = models.DateTimeField(auto_now_add=True)

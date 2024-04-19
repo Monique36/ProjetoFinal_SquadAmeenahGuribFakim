@@ -3,7 +3,8 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 from django.http import Http404, HttpResponseServerError
 from django.shortcuts import render, redirect, get_object_or_404
-
+from .models import Animal
+from .forms import InteresseAdocaoForm
 
 @login_required  # Garante que apenas usuários autenticados tenham acesso
 def adocoes(request):
@@ -85,3 +86,21 @@ def adocao_excluir(request, pk):
 
     except Exception as e:
         return HttpResponseServerError(f"Ocorreu um erro ao excluir a adoção: {str(e)}")
+
+@login_required
+def interesse_adocao(request, animal_id):
+    animal = Animal.objects.get(id=animal_id)
+
+    if request.method == 'POST':
+        form = InteresseAdocaoForm(request.POST)
+        if form.is_valid():
+            interesse = form.save(commit=False)
+            interesse.interessado = request.user
+            interesse.animal = animal
+            interesse.save()
+            return redirect('pagina_de_confirmacao')  # Defina a URL da página de confirmação
+    else:
+        form = InteresseAdocaoForm()
+
+        return render(request, 'interesse_adocao.html', {'form': form, 'animal': animal})
+

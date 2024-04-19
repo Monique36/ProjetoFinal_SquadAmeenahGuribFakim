@@ -3,46 +3,51 @@
 {% load static %}
 {% block title %}Página de Formulário{% endblock %}
 {% block content %}
+
 <body>
+    
     <div class="container">
         <div class="formularios">
             <!--? Conteúdo do formulário abaixo -->
 
             <div class="">
-            <!-- <div class="background-verde"> -->
+                <!-- <div class="background-verde"> -->
                 <h1>Pets para Adoção</h1>
                 <div class="pagina-construcao">
                     <br>
                     <section>
-                        <form action="" method="GET" class= "d-flex">   <!-- Formulário de busca dos animais --> 
-                            <input type="text" id="inputAnimals" class= "form-control me-2" name="q" placeholder="Buscar pet...">  <!-- Campo de entrada de texto para pesquisa --> 
-                            <button type="submit" class="btn btn-primary">Buscar</button> <!-- Botão de envio --> 
+                        <form action="" method="GET" class="d-flex"> <!-- Formulário de busca dos animais -->
+                            <input type="text" id="inputAnimals" class="form-control me-2" name="q"
+                                placeholder="Buscar pet..."> <!-- Campo de entrada de texto para pesquisa -->
+                            <button type="submit" class="btn btn-primary">Buscar</button> <!-- Botão de envio -->
                             <!-- campo de entrada de texto onde os usuários podem inserir palavras-chave para pesquisa 
                             e um botão "Search" que os usuários podem clicar para enviar o formulário -->
-                        </form> 
+                        </form>
                     </section>
                     <section>
                         <table class="tabela">
                             <thead>
-                            <tr>
-                                <th>Foto</th>
-                                <th>Nome</th>
-                                <th>Sexo</th>
-                                <!-- <th>Idade</th> -->
-                                <th>+Detalhes</th>
-                                <!-- Adicione outras colunas conforme necessário -->
-                            </tr>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nome</th>
+                                    <th>Sexo</th>
+                                    <!-- <th>Idade</th> -->
+                                    <th>+Detalhes</th>
+                                    <!-- Adicione outras colunas conforme necessário -->
+                                </tr>
                             </thead>
                             <tbody>
-                            {% for animal in bichinho %}
-                            <tr>
-                                <td> <img src="{{ animal.foto.url }}" alt="Foto do Animal" height="100" width="120"></td>
-                                <td>{{ animal.nome }}</td>
-                                <td>{{ animal.sexo }}</td>
-                                <!-- <td>{{ animal.idade }}</td> -->
-                                <td><a href="{% url 'detalhe_pedido' animal.id %}" class="btn btn-primary">Detalhes</a></td>
-                            </tr>
-                            {% endfor %}
+                                {% for animal in bichinho %}
+                                <tr>
+                                    <td> <img src="{{ animal.foto.url }}" alt="Foto do Animal" height="100" width="120">
+                                    </td>
+                                    <td>{{ animal.nome }}</td>
+                                    <td>{{ animal.sexo }}</td>
+                                    <!-- <td>{{ animal.idade }}</td> -->
+                                    <td><a href="{% url 'detalhe_pedido' animal.id %}"
+                                            class="btn btn-primary">Detalhes</a></td>
+                                </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                     </section>
@@ -52,7 +57,7 @@
                     </section>
                 </div>
             </div>
-            <!--? Conteúdo do formulário acima: -->      
+            <!--? Conteúdo do formulário acima: -->
         </div>
     </div>
 </body>

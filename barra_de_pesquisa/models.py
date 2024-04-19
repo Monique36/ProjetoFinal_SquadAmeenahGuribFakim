@@ -1,5 +1,6 @@
 
 from django.db import models
+from django.contrib.auth.models import User
 
 class Animal(models.Model):
     nome = models.CharField(max_length=100)
@@ -9,3 +10,4 @@ class Animal(models.Model):
     
     # Este trecho de código representa os animais no abrigo. 
     # Ele tem quatro campos: nome, especie, raca e idade.
+

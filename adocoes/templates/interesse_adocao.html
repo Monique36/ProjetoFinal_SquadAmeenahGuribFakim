@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Interesse em Adoção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f9e8;
+        }
+
+        .adoptions-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .adoptions-title {
+            color: #228b22;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .adoption-item {
+            background-color: #def6e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .adoption-details {
+            margin-bottom: 10px;
+        }
+
+        .actions {
+            text-align: right;
+        }
+
+        .btn-gradiente {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-gradiente:hover {
+            background-color: #388e3c;
+        }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: none;
+            background-color: #4caf50;
+            border-color: #4caf50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #back-to-top:hover {
+            background-color: #388e3c;
+            border-color: #388e3c;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulário de Interesse em Adoção</h1>
+    <form method="POST" action="{% url 'interesse_adocao' animal.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- Outros campos do formulário aqui -->
+        <input type="hidden" name="animal_id" value="{{ animal.id }}">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <!-- Botão "Quero ser Adotado" -->
+        <a href="/animais_disponiveis/"><button type="button" class="btn-gradiente">Quero ser Adotado</button></a>
+        <!-- Botão "Interessado em adotar" -->
+        <button type="submit" class="btn-gradiente" formaction="{% url 'interesse_adocao' animal.id %}">Interessado em adotar</button>
+    </form>
+
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.onscroll = function () {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
