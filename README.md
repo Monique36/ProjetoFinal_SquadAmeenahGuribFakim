@@ -23,7 +23,7 @@ O repositório encontra-se dividido em 3 partes:
 - **Página de Detalhes de Cada Animal:** Ao clicar em um animal na lista de animais disponíveis, os usuários podem escolher visualizar mais detalhes sobre ele. Isso inclui informações mais específicas, como nome, espécie, raça, idade, foto, informações médicas e de castração para ajudar o usuário escolher adotar o animal.
 
 - **Painel Administrativo:** O sistema possui um painel administrativo, em que os funcionários podem gerenciar todas as informações relacionadas aos animais, funcionários, solicitantes e adoções. Isso inclui a criação, atualização e exclusão de registros.
-
+  
 
 ## Tecnologias Utilizadas
 - Bootstrap
@@ -36,7 +36,7 @@ O repositório encontra-se dividido em 3 partes:
 - Trello (Metodologia Kanban)
 
 ## Integrantes da Squad
-[<img src="https://github.com/quasiEvil.png" width="60px;"/><br /><sub><a href="https://github.com/quasiEvil">Ana Paula Badaró</a></sub>](https://github.com/quasiEvil) | [<img src="https://github.com/jutdelu.png" width="60px;"/><br /><sub><a href="https://github.com/jutdelu">Juliana Torres Delunardo</a></sub>](https://github.com/jutdelu) | [<img src="https://github.com/Marcia-Moreira.png" width="60px;"/><br /><sub><a href="https://github.com/Marcia-Moreira">Marcia Moreira</a></sub>](https://github.com/Marcia-Moreira) |  [<img src="https://github.com/NuLima1.png" width="60px;"/><br /><sub><a href="https://github.com/NuLima1">Núbia Santos Lima</a></sub>](https://github.com/NuLima1) |
+[<img src="https://github.com/quasiEvil.png" width="60px;"/><br /><sub><a href="https://github.com/quasiEvil">Ana Paula Badaró</a></sub>](https://github.com/quasiEvil) | [<img src="https://github.com/jutdelu.png" width="60px;"/><br /><sub><a href="https://github.com/jutdelu">Juliana Torres Delunardo</a></sub>](https://github.com/jutdelu) | [<img src="https://github.com/Marcia-Moreira.png" width="60px;"/><br /><sub><a href="https://github.com/Marcia-Moreira">Marcia Moreira</a></sub>](https://github.com/Marcia-Moreira) |  [<img src="https://github.com/NuLima1.png" width="60px;"/><br /><sub><a href="https://github.com/NuLima1">Núbia Santos Lima</a></sub>],(https://github.com/NuLima1) |[<img src="https://github.com/Monique36.png" width="60px";"/><br /><sub><a href="https://github.com/Monique36">Monique Mendes</a></sub>], (https://github.com/Monique36)
 |---|---|---|---|
 
 ## Links
